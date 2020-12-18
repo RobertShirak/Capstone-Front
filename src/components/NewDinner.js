@@ -116,7 +116,7 @@ class NewDinner extends Component {
                         //   label="Multiline"
                         multiline
                         rows={4}
-                        defaultValue="Ingredients Needed"
+                        placeholder="Ingredients Needed"
                         variant="outlined"
                         onChange={this.onChangeIngredients}
                         />
@@ -128,7 +128,7 @@ class NewDinner extends Component {
                         //   label="Multiline"
                         multiline
                         rows={4}
-                        defaultValue="Directions Needed"
+                        placeholder="Directions Needed"
                         variant="outlined"
                         onChange={this.onChangeDirections}
                         />

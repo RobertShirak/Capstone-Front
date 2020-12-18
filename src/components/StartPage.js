@@ -105,7 +105,7 @@ export default function Album() {
         </div>
         <div className={classes.secondImage}>
         <Container maxWidth="sm">
-            <div className={classes.heroButtons, classes.thadding}>
+            <div className={classes.heroButtons , classes.thadding}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
                 <Link href= "/desserts/history" style={{ textDecoration: 'none' }}>

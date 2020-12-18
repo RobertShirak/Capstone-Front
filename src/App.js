@@ -10,9 +10,9 @@ import UpdateDesserts from './components/UpdateDesserts';
 import UpdateDinner from './components/UpdateDinner'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
   render() {
     return(
       <div>

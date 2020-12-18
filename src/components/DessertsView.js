@@ -7,6 +7,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {Link} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid'
+import Card from '@material-ui/core/Card'
 
 class DessertsView extends Component{
     constructor(props){
@@ -82,13 +84,14 @@ class DessertsView extends Component{
       </AppBar>
             <Container style={centerit}>
                 <h1>All Dessert Recipes</h1>
-                <Box>
+                <Grid container spacing={4}>
                 {
                     this.state.history.length ?
                     this.state.history.map((recipe, i)=>{
                         console.log(recipe)
-                    return <div style={{centerit}}
+                    return <Grid item xs={12} sm={6} md={4} style={{centerit}}
                     key={i} >
+                        <Card>
                 <span style={{fontWeight:"bold"}}>Name of Recipe:</span> {recipe.name}<br/>
                 
                 <span style={{fontWeight:"bold"}}>Ingredients Needed:</span> {recipe.ingredients} <br/>
@@ -116,7 +119,8 @@ class DessertsView extends Component{
                         <br/>
                         </div>
                         <br/>
-                        </div>
+                        </Card>
+                        </Grid>
                         
                     }) : ""
                 }
@@ -136,7 +140,7 @@ class DessertsView extends Component{
                     </Button>
                 </Link>
                 </div>
-                </Box>
+                </Grid>
             </Container>
             </Router>
         )

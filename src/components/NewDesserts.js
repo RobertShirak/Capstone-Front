@@ -8,6 +8,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {Link} from '@material-ui/core';
+import TextField from '@material-ui/core/TextField'
+
+
 const axios = require("axios");
 
 
@@ -98,7 +101,7 @@ class NewDesserts extends Component {
                 <Box maxWidth={400} >
                 <form onSubmit={this.onSubmit} style={centerit}>
                     
-                    <div>
+                <div>
                         <InputLabel style={{margin:"5px", centerit}}></InputLabel>
                         <Input style={{margin:"5px"}}
                         required 
@@ -108,22 +111,28 @@ class NewDesserts extends Component {
                         </Input>
                     </div>
                     <div>
-                        <InputLabel></InputLabel>
-                        <Input
-                            required 
-                            onChange={this.onChangeIngredients}
-                            type="list"
-                            placeholder="List of Ingredients">
-                        </Input>
+                    <TextField
+                        required
+                        id="outlined-textarea"
+                        //   label="Multiline"
+                        multiline
+                        rows={4}
+                        placeholder="Ingredients Needed"
+                        variant="outlined"
+                        onChange={this.onChangeIngredients}
+                        />
                     </div>
                     <div>
-                        <InputLabel></InputLabel>
-                        <Input
-                            required 
-                            onChange={this.onChangeDirections}
-                            type="text"
-                            placeholder="Recipe Directions">
-                        </Input>
+                    <TextField
+                        required
+                        id="outlined-textarea"
+                        //   label="Multiline"
+                        multiline
+                        rows={4}
+                        placeholder="Directions Needed"
+                        variant="outlined"
+                        onChange={this.onChangeDirections}
+                        />
                     </div>
                     <div>
                         <InputLabel></InputLabel>
